@@ -43,9 +43,6 @@ public class PlaybackFragment extends DialogFragment{
     private TextView mFileNameTextView = null;
     private TextView mFileLengthTextView = null;
 
-    //stores whether or not the mediaplayer is currently playing audio
-    private boolean isPlaying = false;
-
     //stores minutes and seconds of the length of the file.
     long minutes = 0;
     long seconds = 0;
@@ -141,8 +138,7 @@ public class PlaybackFragment extends DialogFragment{
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onPlay(isPlaying);
-                isPlaying = !isPlaying;
+                onPlay();
             }
         });
 
@@ -191,18 +187,13 @@ public class PlaybackFragment extends DialogFragment{
     }
 
     // Play start/stop
-    private void onPlay(boolean isPlaying){
-        if (!isPlaying) {
-            //currently MediaPlayer is not playing audio
-            if(mMediaPlayer == null) {
-                startPlaying(); //start from beginning
-            } else {
-                resumePlaying(); //resume the currently paused MediaPlayer
-            }
-
-        } else {
-            //pause the MediaPlayer
+    private void onPlay(){
+        if(mMediaPlayer == null) {
+            startPlaying();
+        } else if (mMediaPlayer.isPlaying()) {
             pausePlaying();
+        } else {
+            resumePlaying();
         }
     }
 
@@ -212,6 +203,7 @@ public class PlaybackFragment extends DialogFragment{
 
         try {
             mMediaPlayer.setDataSource(item.getFilePath());
+            Log.i("wwww", item.getFilePath());
             mMediaPlayer.prepare();
             mSeekBar.setMax(mMediaPlayer.getDuration());
 
@@ -286,7 +278,6 @@ public class PlaybackFragment extends DialogFragment{
         mMediaPlayer = null;
 
         mSeekBar.setProgress(mSeekBar.getMax());
-        isPlaying = !isPlaying;
 
         mCurrentProgressTextView.setText(mFileLengthTextView.getText());
         mSeekBar.setProgress(mSeekBar.getMax());
@@ -315,6 +306,6 @@ public class PlaybackFragment extends DialogFragment{
     };
 
     private void updateSeekBar() {
-        mHandler.postDelayed(mRunnable, 1000);
+        mHandler.post(mRunnable);
     }
 }
