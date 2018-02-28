@@ -108,7 +108,7 @@ public class RecordingService extends Service {
     public void setFileNameAndPath() {
         int count = -1;
         File f;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
         String fileName = sdf.format(new Date());
         do {
             count++;
