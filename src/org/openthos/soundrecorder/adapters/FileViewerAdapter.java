@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder.adapters;
+package org.openthos.soundrecorder.adapters;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -19,11 +19,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.text.format.DateUtils;
 
-import com.danielkim.soundrecorder.DBHelper;
-import com.danielkim.soundrecorder.R;
-import com.danielkim.soundrecorder.RecordingItem;
-import com.danielkim.soundrecorder.fragments.PlaybackFragment;
-import com.danielkim.soundrecorder.listeners.OnDatabaseChangedListener;
+import org.openthos.soundrecorder.DBHelper;
+import org.openthos.soundrecorder.R;
+import org.openthos.soundrecorder.RecordingItem;
+import org.openthos.soundrecorder.fragments.PlaybackFragment;
+import org.openthos.soundrecorder.listeners.OnDatabaseChangedListener;
 
 import java.io.File;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder.activities;
+package org.openthos.soundrecorder.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 
-import com.danielkim.soundrecorder.R;
-import com.danielkim.soundrecorder.fragments.SettingsFragment;
+import org.openthos.soundrecorder.R;
+import org.openthos.soundrecorder.fragments.SettingsFragment;
 
 /**
  * Created by Daniel on 5/22/2017.

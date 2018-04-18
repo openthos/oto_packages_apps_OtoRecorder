@@ -41,7 +41,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-import com.danielkim.soundrecorder.R;
+import org.openthos.soundrecorder.R;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {
 

@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder;
+package org.openthos.soundrecorder;
 
 import android.content.Context;
 import android.content.SharedPreferences;

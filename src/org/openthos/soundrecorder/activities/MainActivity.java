@@ -1,4 +1,4 @@
-package com.danielkim.soundrecorder.activities;
+package org.openthos.soundrecorder.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,10 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.danielkim.soundrecorder.R;
-import com.danielkim.soundrecorder.fragments.FileViewerFragment;
-import com.danielkim.soundrecorder.fragments.LicensesFragment;
-import com.danielkim.soundrecorder.fragments.RecordFragment;
+import org.openthos.soundrecorder.R;
+import org.openthos.soundrecorder.fragments.FileViewerFragment;
+import org.openthos.soundrecorder.fragments.LicensesFragment;
+import org.openthos.soundrecorder.fragments.RecordFragment;
 
 
 public class MainActivity extends ActionBarActivity{
