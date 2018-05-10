@@ -29,6 +29,7 @@ LOCAL_AAPT_FLAGS := --auto-add-overlay \
 LOCAL_PACKAGE_NAME := OtoRecorder
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OVERRIDES_PACKAGES := Music
 
 include $(BUILD_PACKAGE)
 include $(call all-makefiles-under,$(LOCAL_PATH))
