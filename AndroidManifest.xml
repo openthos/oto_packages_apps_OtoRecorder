@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.openthos.soundrecorder" >
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+        <group
+            gid="sdcard_rw"
+            tools:ignore="MissingPrefix" />
+        <group
+            gid="media_rw"
+            tools:ignore="MissingPrefix" />
+    </uses-permission>
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions">
+        <group
+            gid="sdcard_rw"
+            tools:ignore="MissingPrefix" />
+        <group
+            gid="media_rw"
+            tools:ignore="MissingPrefix" />
+    </uses-permission>
 
     <application
         android:allowBackup="true"

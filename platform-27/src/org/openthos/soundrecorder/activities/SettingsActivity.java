@@ -20,6 +20,7 @@ public class SettingsActivity extends android.support.v7.app.AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_preferences);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
